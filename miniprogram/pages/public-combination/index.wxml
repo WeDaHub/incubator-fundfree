@@ -1,0 +1,4 @@
+<view class="title">社区公开组合</view>
+<view class="content">
+  <color-item wx:for="{{list}}" wx:key="index" bind:handlerItemTap="handlerJump" sourceData="{{item}}"></color-item>
+</view>

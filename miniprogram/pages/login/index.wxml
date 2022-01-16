@@ -1,0 +1,14 @@
+<view class="main">
+  <!-- 需要使用 button 来授权登录 -->
+  <view>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="subtitle">
+    宁取细水长流、不要惊涛裂岸
+  </view>
+  <view class="wrap-btn">
+    <button class="btn" type="primary" wx:if="{{canIUse}}" open-type="getUserInfo"
+      bindgetuserinfo="bindGetUserInfo">开启取金之旅</button>
+    <view wx:else>请升级微信版本</view>
+  </view>
+</view>

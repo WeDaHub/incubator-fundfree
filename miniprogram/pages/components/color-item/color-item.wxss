@@ -1,0 +1,30 @@
+/* pages/components/color-item.wxss */
+.list-item {
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 10px 16px;
+  border-top: 2rpx solid #f3f3f3;
+}
+
+.left-wrap {
+  width: 100rpx;
+  height: 100rpx;
+  font-size: 56rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: azure;
+}
+
+.group {
+  margin: 4rpx 0 0 20rpx;
+
+}
+
+.title {
+  font-size: 32rpx;
+}
+
+.sub-title {
+  font-size: 26rpx;
+  color: #cccccc;
+}

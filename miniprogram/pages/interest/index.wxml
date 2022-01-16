@@ -1,0 +1,19 @@
+<!--miniprogram/pages/interest/index.wxml-->
+
+<view class="contract">
+  <view class="content">
+    <view class="title">专业顾问</view>
+
+    <view>基金：<text>基金从业资格证</text>
+      <mp-icon icon="done2" color="#71ae46" size="{{20}}"></mp-icon>
+    </view>
+    <view>证券：<text>证券从业资格证</text>
+      <mp-icon icon="done2" color="#71ae46" size="{{20}}"></mp-icon>
+    </view>
+  </view>
+
+  <view class="img-wrap">
+    <image style="height: 100vw" mode="aspectFit" src="{{cqq_contract}}"></image>
+    <view class="tips">截图保存后， 使用微信扫码识别，交流学习心得</view>
+  </view>
+</view>

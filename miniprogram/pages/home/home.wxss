@@ -1,0 +1,44 @@
+/* miniprogram/pages/home.wxss */
+.title {
+  text-align: center;
+  font-size: 40rpx;
+  padding: 20rpx 0;
+}
+.work-space {
+  background: #fff;
+  margin: 0 32rpx;
+  margin-top: 100rpx;
+  box-shadow:5px 6px 14px #e7e6e6;
+}
+.menu {
+  display: flex;
+  justify-content: space-around;
+}
+.menu-item {
+  display: flex;
+  flex-grow: 1;
+  width: 33.33%;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2rpx solid #f1f1f1;
+  border-left: 2rpx solid #f1f1f1;
+  padding: 60rpx 0;
+}
+.menu .menu-item:last-child {
+  border-right: 2rpx solid #f1f1f1;
+}
+.menu:last-child {
+  border-bottom: 2rpx solid #f1f1f1;
+}
+.menu-item-name {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  color: #666;
+}
+.footer {
+  padding-top: 100rpx;
+  text-align: center;
+  color: #adadad;
+  font-size: 24rpx;
+  font-weight: 100;
+}

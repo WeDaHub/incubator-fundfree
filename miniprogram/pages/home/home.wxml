@@ -1,0 +1,48 @@
+<view class="title">我的工作台</view>
+<!-- <view style="height: 120rpx;">
+  <view style="width: 120rpx">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName"></open-data>
+</view> -->
+<view class="work-space">
+  <view class="menu">
+    <view class="menu-item" data-navigate="customList" bindtap="handlerNavigate">
+      <mp-icon type="field" icon="contacts" color="#63b2ee" size="{{42}}"></mp-icon>
+      <text class="menu-item-name">我的组合</text>
+    </view>
+    <view class="menu-item" data-navigate="addCustomer" bindtap="handlerNavigate">
+      <mp-icon type="field" icon="add-friends" color="#f8cb7f" size="{{42}}"></mp-icon>
+      <text class="menu-item-name">添加组合</text>
+    </view>
+    <view class="menu-item" data-navigate="addFund" bindtap="handlerNavigate">
+      <mp-icon type="field" icon="add2" color="#9987ce" size="{{42}}"></mp-icon>
+      <text class="menu-item-name">添加基金</text>
+    </view>
+
+    <!-- <view class="menu-item">
+      <mp-icon type="field" icon="add" color="#ccc" size="{{42}}"></mp-icon>
+      <text class="menu-item-name" style="color: #ccc">开发中</text>
+    </view> -->
+  </view>
+  <view class="menu">
+    <view class="menu-item" data-navigate="fundList" bindtap="handlerNavigate">
+      <mp-icon type="field" icon="note" color="#76da91" size="{{42}}"></mp-icon>
+      <text class="menu-item-name">公开组合</text>
+    </view>
+    <view class="menu-item" data-navigate="interest" bindtap="handlerNavigate">
+      <mp-icon type="field" icon="discover" color="#FF6666" size="{{42}}"></mp-icon>
+      <text class="menu-item-name">专属客服</text>
+    </view>
+    <view class="menu-item" data-navigate="communication" bindtap="handlerNavigate">
+      <mp-icon type="field" icon="group-detail" color="#3cb9fc" size="{{42}}"></mp-icon>
+      <text class="menu-item-name">学习交流</text>
+    </view>
+  </view>
+  <view class="menu">
+
+  </view>
+</view>
+<view class="footer">
+  <text class="footer-version">版本号: {{version}}</text>
+</view>

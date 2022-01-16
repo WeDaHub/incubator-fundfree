@@ -1,0 +1,15 @@
+/* miniprogram/pages/communication/index.wxss */
+.communication {
+  text-align: center;
+}
+.title {
+  padding: 40rpx;
+  margin-bottom: 40rpx;
+  font-size: 38rpx;
+  text-align: center;
+}
+.tips {
+  color: rgb(160, 158, 158);
+  font-size: 26rpx;
+  text-align: center;
+}

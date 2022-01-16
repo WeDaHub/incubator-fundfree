@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "选择组合",
+  "usingComponents": {
+    "mp-searchbar": "weui-miniprogram/searchbar/searchbar",
+    "color-item": "/pages/components/color-item/color-item"
+  }
+}

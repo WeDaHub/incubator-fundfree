@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/customer/list/customer",
+    "pages/interest/index",
+    "pages/login/index",
+    "pages/fundlist/list/index",
+    "pages/fundlist/add/index",
+    "pages/fundlist/search/index",
+    "pages/customer/add/index",
+    "pages/communication/index",
+    "pages/public-combination/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "初晨投资",
+    "navigationBarTextStyle": "black"
+  },
+  "useExtendedLib": {
+    "weui": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

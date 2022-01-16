@@ -1,0 +1,23 @@
+<!--miniprogram/pages/customer.wxml-->
+<view>
+  <wxs module="utils">
+    module.exports = {
+      // 截取时间
+      randomColor: function (colorList) {
+        return colorList[Math.round(Math.random() * 11)]
+      },
+      firstWord: function (word) {
+        return word.substring(0, 1)
+      },
+    }
+  </wxs>
+  <view class="list-item" wx:for="{{list}}" wx:key="index" bindtap="handlerJump" data-fund="{{item}}">
+    <view class="left-wrap" style="background: #{{utils.randomColor(colorList)}}">
+      {{utils.firstWord(item.name)}}
+    </view>
+    <view class="group">
+      <view class="title">{{item.name}}</view>
+      <view class="sub-title">{{item.account}}</view>
+    </view>
+  </view>
+</view>

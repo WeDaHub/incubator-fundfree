@@ -1,0 +1,60 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view>
+  <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+
+    <!-- <view class="weui-cells__title">选择</view> -->
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_select" style="padding: 0 16px">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">组合名称</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="selector" bindchange="bindAccountChange" value="{{accountIndex}}" range="{{list}}"
+            range-key="name">
+            <view class="weui-select">{{list[accountIndex].name}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <mp-cells title="基金信息">
+      <mp-cell show-error prop="fundCode" title="基金代码" ext-class="">
+        <input bindinput="formFundCodeChange" type="number" data-field="fundCode" class="weui-input"
+          placeholder="请输入基金代码" />
+      </mp-cell>
+      <mp-cell prop="fundName" title="基金名称" ext-class="">
+        <input value="{{formData.fundName}}" bindinput="formInputChange" data-field="fundName" class="weui-input"
+          placeholder="请输入基金名称" />
+      </mp-cell>
+      <mp-cell prop="fundValue" title="基金净值" ext-class="">
+        <input value="{{formData.fundValue}}" bindinput="formInputChange" data-field="fundValue" class="weui-input"
+          placeholder="请输入基金净值" />
+      </mp-cell>
+      <mp-cell prop="fundValue" title="基金经理" ext-class="">
+        <input value="{{formData.fundManager}}" bindinput="formInputChange" data-field="fundManager" class="weui-input"
+          placeholder="请输入基金经理" />
+      </mp-cell>
+      <mp-cell prop="fundValue" title="购买日期" ext-class="">
+        <picker mode="date" start="2020-09-01" data-field="buyDate" end="2030-09-01"
+          bindchange="formInputChange">
+          <view class="picker">
+            {{formData.buyDate}}
+          </view>
+        </picker>
+      </mp-cell>
+    </mp-cells>
+    <mp-cells title="预计购买金额">
+      <mp-cell show-error prop="buyMoney" title="购买金额" ext-class="">
+        <input bindinput="formInputChange" type="number" data-field="buyMoney" class="weui-input"
+          placeholder="请输入购买金额" />
+        <view slot="footer" class="weui-vcode-btn">元</view>
+      </mp-cell>
+      <mp-cell show-error prop="rate" title="购买费率" ext-class="">
+        <input type="digit" bindinput="formInputChange" data-field="rate" class="weui-input" placeholder="请输入手续费" />
+        <view slot="footer" class="weui-vcode-btn">%</view>
+      </mp-cell>
+    </mp-cells>
+  </mp-form>
+  <view class="weui-btn-area">
+    <button class="submit-btn" type="primary" bindtap="submitForm">确定</button>
+  </view>
+</view>

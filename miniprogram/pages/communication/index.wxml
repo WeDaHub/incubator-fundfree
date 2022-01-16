@@ -1,0 +1,8 @@
+<view class="communication">
+  <!--miniprogram/pages/communication/index.wxml-->
+  <view class="title">欢迎进入学习交投群</view>
+  <!-- <image style="height: 100vw" mode="aspectFit"
+    src="">
+  </image> -->
+  <view class="tips">请添加小助手微信, 拉你入群，微信号： dzry808</view>
+</view>

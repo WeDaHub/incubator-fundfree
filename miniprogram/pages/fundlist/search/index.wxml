@@ -1,0 +1,5 @@
+<view>
+  <view class="page__bd">
+    <mp-searchbar ext-class="my-search" bindselectresult="selectResult" focus value="{{inputVal}}" search="{{search}}"></mp-searchbar>
+  </view>
+</view>

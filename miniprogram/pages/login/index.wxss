@@ -1,0 +1,24 @@
+/* miniprogram/login/index.wxss */
+.main {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+}
+.subtitle {
+  padding: 100rpx 0;
+  font-size: 40rpx;
+}
+.wrap-btn {
+  margin: 200rpx 0;
+  width: 100%;
+  text-align: center;
+}
+button{
+  font-size: 28rpx;
+  font-weight: 400;
+  display: inline-block;
+  width: 90% !important;
+  background-color: #409EFF !important;
+}

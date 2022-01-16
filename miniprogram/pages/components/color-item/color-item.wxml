@@ -1,0 +1,23 @@
+<!--pages/components/color-item.wxml-->
+<view>
+  <wxs module="utils">
+    module.exports = {
+      // 获取随机颜色
+      randomColor: function (colorList) {
+        return colorList[Math.round(Math.random() * 11)]
+      },
+      // firstWord: function (word) {
+      //   return word.substring(0, 1)
+      // },
+    }
+  </wxs>
+  <view class="list-item" key="{{key}}" bindtap="handlerItemTap" data-item="{{sourceData}}">
+    <view class="left-wrap" style="background: #{{utils.randomColor(colorList)}}">
+      {{sourceData.icon}}
+    </view>
+    <view class="group">
+      <view class="title">{{sourceData.title}}</view>
+      <view class="sub-title">{{sourceData.subTitle}}</view>
+    </view>
+  </view>
+</view>

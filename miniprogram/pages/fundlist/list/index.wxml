@@ -1,0 +1,80 @@
+<!--miniprogram/pages/fundlist/list/index.wxml-->
+<view class="main">
+  <wxs module="utils">
+    module.exports = {
+      // 截取时间
+      fmtDate: function (str) {
+        if (!str) return ''
+        return str.slice(5)
+      },
+      // 判断是涨了还是跌了
+      calcColor: function (val) {
+        return Number(val) > 0 ? 'red' : 'green'
+      },
+    }
+  </wxs>
+
+  <view class="head-info">
+    <view class="title">
+      <text>{{userTotalMoney}}</text>
+      <text>总金额(元)</text>
+    </view>
+    <view class="sub-title">
+      <view class="sub-title-left">
+        <view>日收益 {{userDayIncome}}</view>
+        <view>日收益率 {{dayRate}}%</view>
+      </view>
+      <view class="sub-title-right">
+        <view>总收益 {{userTotalIncome}}</view>
+        <view>总收益率 {{totalRate}}%</view>
+      </view>
+    </view>
+  </view>
+  <view class="list-container">
+    <scroll-view 
+    class="list-view"
+    scroll-y="true"
+    refresher-enabled="{{true}}"
+    refresher-threshold="{{90}}"
+    enhanced="{{true}}"
+    refresher-triggered="{{triggered}}"
+    bindrefresherrefresh="onRefresh">
+      <view wx:for="{{possessList}}" wx:for-item="item" wx:for-index="index" wx:key="_id" class="scroll-view-item">
+        <view class="item-title">
+          <view class="item-title-left">
+            <text>{{item.fundName}}</text>
+            <text>{{item.fundCode}}</text>
+          </view>
+          <text>{{item.fundManager}}</text>
+        </view>
+        <mp-slideview data-id="{{item._id}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+          <view class="item-content">
+            <view class="item-total-money">
+              <text>{{item.totalMoney}}</text>
+              <text class="descript-text">持仓金额</text>
+            </view>
+
+            <view class="item-estimate-value">
+              <text style="color: {{ utils.calcColor(item._estimateIncrease)}}">{{item.dayIncome}}</text>
+              <text class="increase-rate"
+                style="color: {{ utils.calcColor(item._estimateIncrease)}}">{{item._estimateIncrease}}%</text>
+              <text class="descript-text">盘中估值</text>
+            </view>
+
+            <view class="item-day-value" style="color: {{ utils.calcColor(item._lastIncrease)}}">
+              <text>{{item.lastDayIncome}}</text>
+              <text class="increase-rate">{{item._lastIncrease}}%</text>
+              <text class="descript-text">日收益({{utils.fmtDate(item._lastDate)}})</text>
+            </view>
+
+            <view class="item-holding-gains" style="color: {{ utils.calcColor(item.incomeIncrease)}}">
+              <text>{{item.totalIncome}}</text>
+              <text class="increase-rate">{{item.incomeIncrease}}%</text>
+              <text class="descript-text">持仓收益</text>
+            </view>
+          </view>
+        </mp-slideview>
+      </view>
+    </scroll-view>
+  </view>
+</view>

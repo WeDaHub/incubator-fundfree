@@ -1,0 +1,25 @@
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+<view>
+  <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+    <mp-cells title="添加组合" footer="创建自己的专属组合">
+      <mp-cell show-error prop="name" title="组合名称" ext-class="">
+        <input bindinput="formInputChange" data-field="name" class="weui-input" placeholder="请输入组合名称" />
+      </mp-cell>
+      <mp-cell prop="account" title="组合描述" ext-class="">
+        <input bindinput="formInputChange" data-field="account" class="weui-input" placeholder="请输入组合描述" />
+      </mp-cell>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">是否公开</view>
+        <view class="weui-cell__ft">
+          <switch bindchange="formInputChange" data-field="public" checked="{{formData.public}}" />
+        </view>
+      </view>
+    </view>
+  </mp-cells>
+
+  </mp-form>
+  <view class="weui-btn-area">
+    <button class="submit-btn" type="primary" bindtap="submitForm">确定</button>
+  </view>
+</view>

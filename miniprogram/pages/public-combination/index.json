@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "color-item": "/pages/components/color-item/color-item"
+  }
+}

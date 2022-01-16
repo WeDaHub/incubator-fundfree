@@ -1,0 +1,4 @@
+/* miniprogram/pages/customer/add/index.wxss */
+.weui-btn-area .submit-btn {
+  width: 100%;
+}

@@ -1,0 +1,35 @@
+/* miniprogram/pages/interest/index.wxss */
+.contract {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.content {
+  /* padding: 40rpx; */
+  font-size: 28rpx;
+  text-align: center;
+}
+.content .title {
+  padding: 100rpx;
+  font-size: 40rpx;
+}
+.img-wrap {
+  flex-grow: 2;
+  width: 100%;
+  text-align: center;
+}
+.tips {
+  text-align: center;
+  font-size: 26rpx;
+  color: #a1a1a1;
+}
+button.image-btn {
+  width: 100%;
+  display: flex;
+  border: none !important;
+  text-align: center;
+  justify-content: center;
+}

@@ -1,0 +1,16 @@
+/* miniprogram/pages/public-combination/index.wxss */
+.title {
+  text-align: center;
+  font-size: 32rpx;
+  box-shadow: rgb(213, 214, 212) 2px 2px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+.content {
+  margin-top: 120rpx;
+}
