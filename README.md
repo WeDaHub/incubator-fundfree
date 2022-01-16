@@ -5,11 +5,11 @@
 - 我的组合：可以查看自己的组合基金列表，可以添加多个组合，组合也可以设置公开
 - 云函数：数据采用的是云开发中的云函数
 
-## 参考文档
-
-- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
-
 ## 常用计算公式
 净申购金额 = 申购金额 / (1 + 申购费率)
 申购费 = 申购金额 - 净申购金额
+
+## 参考文档
+
+- [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 申购份额 = 净申购金额 / 申购当日净值
